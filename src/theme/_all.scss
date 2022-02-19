@@ -1,0 +1,60 @@
+/**
+ * Entry point for applcation-wide CSS.
+ */
+
+@import 'tailwind.css';
+@import 'brand.scss';
+@import 'colors';
+
+.remove-skeleton-gap {
+  .b-skeleton {
+    margin-top: 0rem;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+input[type='button'] {
+  outline: none;
+}
+input[type='button']::-moz-focus-inner {
+  border: 0;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+.field-width {
+  width: 250% !important;
+}
+
+.gif {
+  color: rgb(29, 155, 240) !important;
+}
+
+.navbar {
+  background-color: rgba(white, 0.9) !important;
+}
+
+//TODO: import additional global CSS here.
+@import 'bulma';

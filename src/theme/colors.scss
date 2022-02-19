@@ -1,0 +1,35 @@
+/**
+ * Default colors used by Tailwind in Light theme.
+ */
+:root {
+  --typography-primary: #000000;
+  --typography-secondary: #201b1b;
+  --typography-tertiary: #8c9fae;
+  --typography-error: #ac3838;
+  --typography-success: #3fb984;
+  --typography-light: #718096;
+  --app-background: #ffffff;
+  --app-footer: #b3becc;
+  --app-main: #edebeb;
+  --app-button: #1c97e9;
+  --button-hover: #0f7bc3;
+  --app-hover2: #badff8;
+  --app-hover3: #f7f7f7;
+  --app-trending: #f7f9f9;
+  --app-hover: #f0f0f0;
+  --app-search: #eeeeee;
+  --button-success: #d3fdd0;
+  --button-warning: #d3782d;
+  --button-failure: #ffc8c8;
+}
+
+.theme-color-preference {
+  /**
+   * Dark Theme.
+   * Override default colors to match theme.
+   * Also, add theme specific element styling.
+   */
+  &.dark {
+    // --typography-primary: #000;
+  }
+}

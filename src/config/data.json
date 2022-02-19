@@ -1,0 +1,108 @@
+{
+  "posts":[
+    {
+      "id":1,
+      "timeElasped":"3h",
+      "dateCreated":"",
+      "likes":"250.1K",
+      "comments":"500",
+      "retweets":"120",
+      "isLiked": false,
+      "username": "@fornitegaming",
+      "displayName":"Fornite",
+      "isVerified":true,
+      "caption":"A new kind of Fortnite Pack is here. With Level Up Quest Packs, collect a new Outfit upon purchasing the Pack, then complete Quests to earn cosmetic rewards and up to 28 levels before the end of the Season. The first Level Up Quest Pack is available in the Item shop now: Monarch’s Level Up Quest Pack! ",
+      "profilePic": "https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/fornite.webp?alt=media&token=41baf0fc-ae2e-469e-a0e3-831f5d912ff1",
+      "media":"https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/posts%2FY2Mate.is%20-%20Announcing%20Monarch%E2%80%99s%20Level%20Up%20Quest%20Pack%20in%20Fortnite!-Hsai7pkCxns-1080p-1645056639555.mp4?alt=media&token=6f6dabef-e617-4325-bd86-a792ebbfdb37",
+      "type":"video"
+    },
+    {
+      "id":2,
+      "timeElasped":"1h",
+      "dateCreated":"",
+      "likes":"10.1K",
+      "comments":"26",
+      "retweets":"5",
+      "isLiked": false,
+      "profilePic":"https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/glea.jpg?alt=media&token=82ed6ea2-2c75-4ddb-abd3-4bc7ed903920",
+      "isVerified":false,
+      "displayName": "Jamaican Gleaner",
+      "username": "@JamaicanGleaner",
+      "caption":"Nigerian sprinter Blessing Okagbare has been banned for 10 years for multiple breaches of anti-doping rules. Five years are for the use of multiple prohibited substances and five years for her reported refusal to cooperate with Athletics Integrity Unit.",
+      "media":"https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/posts%2FFL4wmHSXMAMYPTW.jpg?alt=media&token=8da409f4-a09b-45c9-9301-628c8750c307",
+      "type":"image"
+    },
+    {
+      "id":3,
+      "timeElasped":"3d",
+      "dateCreated":"",
+      "isVerified":true,
+      "likes":"100.5K",
+      "comments":"250",
+      "retweets":"100",
+      "isLiked": false,
+      "profilePic":"https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/posts%2Fchoppa.jpg?alt=media&token=62c562ae-49ac-4425-9b51-b1507f1dbab0",
+      "username": "@nlechoppamusic",
+      "displayName":"NLE Choppa",
+      "type":"image",
+      "caption":"Verified Me vs. Me OUT EVERYWHERE!! Put My Grind To The Test🤞🏿💜 No Half Step",
+      "media":"https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/posts%2Fmvmfnl.jpg?alt=media&token=c5ec4b05-3778-4ebb-8d58-c5af73392532"
+    }
+  ],
+
+  "trends": [
+    {
+      "id": 1,
+      "title": "Trending in Jamaica",
+      "subtitle": "Jamaica",
+      "miniSubtitle": "8,850 Tweets"
+    },
+    {
+      "id": 2,
+      "title": "Trending in Jamaica",
+      "subtitle": "Clarendon",
+      "miniSubtitle": ""
+    },
+    {
+      "id": 3,
+      "title": "Trending in Jamaica",
+      "subtitle": "St. Ann",
+      "miniSubtitle": ""
+    },
+    {
+      "id": 4,
+      "title": "Trending in Jamaica",
+      "subtitle": "Shenseea",
+      "miniSubtitle": "205K Tweets"
+    },
+    {
+      "id": 5,
+      "title": "Music Trending",
+      "subtitle": "#DoWeHaveAProblem",
+      "miniSubtitle": "17.1K Tweets"
+    }
+  ],
+  "whoToFollow": [
+    {
+      "profilePic": "https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/drake.jpg?alt=media&token=831a9c05-0d88-40bc-868d-8b9996d260f2",
+      "displayName": "Aubrey Graham",
+      "username": "@champangepapi",
+      "isVerified": true,
+      "isPromoted": true
+    },
+    {
+      "profilePic": "https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/fornite.webp?alt=media&token=41baf0fc-ae2e-469e-a0e3-831f5d912ff1",
+      "displayName": "Fornite",
+      "username": "@fornitegaming",
+      "isVerified": true,
+      "isPromoted": false
+    },
+    {
+      "profilePic": "https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/lilbaby.jpg?alt=media&token=8680091d-6994-4128-bbed-ce8d07c4f64f",
+      "displayName": "Lil Baby",
+      "username": "@lilbaby",
+      "isVerified": true,
+      "isPromoted": false
+    }
+  ]
+}
