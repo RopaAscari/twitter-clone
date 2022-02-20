@@ -15,7 +15,7 @@
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
+            stroke-width="1"
             stroke-linecap="round"
             stroke-linejoin="round"
           >
@@ -67,13 +67,13 @@
 
         <div class="[ flex justify-between ]">
           <div class="[ flex ml-24 ]">
-            <button class="[ mt-2 hover:bg-app-hover2 rounded-full p-2 ]">
+            <button class="[ mt-2 hover:bg-button-hover2 rounded-full p-2 ]">
               <svg
                 class="h-6 w-6 text-app-button"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
+                stroke-width="1"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
@@ -82,9 +82,9 @@
                 <polyline points="21 15 16 10 5 21" />
               </svg>
             </button>
-            <button class="[ mt-2 hover:bg-app-hover2 rounded-full p-2 ]">
+            <button class="[ mt-2 hover:bg-button-hover2 rounded-full p-2 ]">
               <svg
-                stroke-width="0.5"
+                stroke-width="0.2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 aria-hidden="true"
@@ -92,7 +92,7 @@
               >
                 <g>
                   <path
-                    stroke-width="0.5"
+                    stroke-width="0"
                     fill="currentColor"
                     d="M19 10.5V8.8h-4.4v6.4h1.7v-2h2v-1.7h-2v-1H19zm-7.3-1.7h1.7v6.4h-1.7V8.8zm-3.6 1.6c.4 0 .9.2 1.2.5l1.2-1C9.9 9.2 9 8.8 8.1 8.8c-1.8 0-3.2 1.4-3.2 3.2s1.4 3.2 3.2 3.2c1 0 1.8-.4 2.4-1.1v-2.5H7.7v1.2h1.2v.6c-.2.1-.5.2-.8.2-.9 0-1.6-.7-1.6-1.6 0-.8.7-1.6 1.6-1.6z"
                   ></path>
@@ -104,13 +104,13 @@
                 </g>
               </svg>
             </button>
-            <button class="[ mt-2 hover:bg-app-hover2 rounded-full p-2 ]">
+            <button class="[ mt-2 hover:bg-button-hover2 rounded-full p-2 ]">
               <svg
                 class="h-6 w-6 text-app-button"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                stroke-width="2"
+                stroke-width="1"
                 stroke="currentColor"
                 fill="none"
                 stroke-linecap="round"
@@ -123,7 +123,7 @@
                 <line x1="4" y1="20" x2="18" y2="20" />
               </svg>
             </button>
-            <button class="[ mt-2 hover:bg-app-hover2 rounded-full p-2 ]">
+            <button class="[ mt-2 hover:bg-button-hover2 rounded-full p-2 ]">
               <svg
                 class="h-6 w-6 text-app-button"
                 fill="none"
@@ -133,18 +133,18 @@
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
+                  stroke-width="1.5"
                   d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
             </button>
-            <button class="[ mt-2 hover:bg-app-hover2 rounded-full p-2 ]">
+            <button class="[ mt-2 hover:bg-button-hover2 rounded-full p-2 ]">
               <svg
                 class="h-6 w-6 text-app-button"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                stroke-width="2"
+                stroke-width="1"
                 stroke="currentColor"
                 fill="none"
                 stroke-linecap="round"
@@ -158,7 +158,7 @@
                 <rect x="8" y="15" width="2" height="2" />
               </svg>
             </button>
-            <button class="[ mt-2 hover:bg-app-hover2 rounded-full p-2 ]">
+            <button class="[ mt-2 hover:bg-button-hover2 rounded-full p-2 ]">
               <svg
                 class="h-6 w-6 text-app-button font-light"
                 fill="none"
@@ -168,13 +168,13 @@
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
+                  stroke-width="1"
                   d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                 />
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
+                  stroke-width="1"
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
@@ -183,21 +183,21 @@
           <div>
             <b-button
               :disabled="disabled"
-              class="[ bg-app-button hover:bg-button-hover text-white font-bold px-8 rounded-full ]"
+              class="[ bg-app-button hover:bg-button-hover1 text-white font-bold px-8 rounded-full ]"
             >
               <p class="[ text-app-background text-center mt-2 mb-2 ]">Tweet</p>
             </b-button>
           </div>
         </div>
       </div>
-      <button class="[ hover:bg-app-hover3 w-full h-12 ]">
-        <p class="[ text-center text-app-button text-lg ]">Show 3 Tweets</p>
+      <button class="[ hover:bg-button-hover3 w-full h-12 ]">
+        <p class="[ text-center text-app-button text-md ]">Show 3 Tweets</p>
       </button>
     </div>
     <div
       :key="post.id"
       v-for="post in posts"
-      class="[ flex p-4 border-t-2 border-app-main hover:bg-app-hover3 cursor-pointer w-full ]"
+      class="[ flex p-4 border-t-2 border-app-main hover:bg-button-hover3 cursor-pointer w-full ]"
     >
       <div>
         <img class="[ w-10 h-10 rounded-full ]" :src="post.profilePic" />
@@ -232,10 +232,10 @@
             <template #trigger="{}">
               <button
                 type="button"
-                class="[ hover:bg-app-hover2 rounded-full text-center justify-center flex align-middle ]"
+                class="[ hover:bg-button-hover2 rounded-full text-center justify-center flex align-middle ]"
               >
                 <svg
-                  class="[ h-6 w-6 hover:text-button-hover text-center ]"
+                  class="[ h-6 w-6 hover:text-button-hover1 text-center ]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -282,9 +282,10 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1"
-                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
                 />
               </svg>
+
               Unfollow {{ post.username }}</b-dropdown-item
             >
             <b-dropdown-item
@@ -301,9 +302,10 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1"
-                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"
                 />
               </svg>
+
               Add/remove {{ post.username }} from Lists</b-dropdown-item
             >
             <b-dropdown-item
@@ -312,16 +314,16 @@
             >
               <svg
                 class="[ h-6 w-6 mr-2 ]"
-                fill="none"
                 viewBox="0 0 24 24"
+                fill="none"
                 stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1"
-                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                <line x1="23" y1="9" x2="17" y2="15" />
+                <line x1="17" y1="9" x2="23" y2="15" />
               </svg>
               Mute {{ post.username }}</b-dropdown-item
             >
@@ -331,16 +333,15 @@
             >
               <svg
                 class="[ h-6 w-6 mr-2 ]"
-                fill="none"
                 viewBox="0 0 24 24"
+                fill="none"
                 stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1"
-                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
+                <circle cx="12" cy="12" r="10" />
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
               </svg>
               Block {{ post.username }}</b-dropdown-item
             >
@@ -358,9 +359,10 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1"
-                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                 />
               </svg>
+
               Embed Tweet</b-dropdown-item
             >
             <b-dropdown-item
@@ -369,16 +371,17 @@
             >
               <svg
                 class="[ h-6 w-6 mr-2 ]"
-                fill="none"
                 viewBox="0 0 24 24"
+                fill="none"
                 stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1"
-                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"
                 />
+                <line x1="4" y1="22" x2="4" y2="15" />
               </svg>
               Report Tweet</b-dropdown-item
             >
@@ -405,7 +408,7 @@
         <div class="[ flex justify-between w-full mt-4 ]">
           <button class="[ flex hover:text-app-button ]">
             <svg
-              class="[ h-8 w-8 hover:text-app-button hover:bg-app-hover2 rounded-full p-1 ]"
+              class="[ h-8 w-8 hover:text-app-button hover:bg-button-hover2 rounded-full p-1 ]"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -455,7 +458,7 @@
             <span class="[ font-semibold ml-3 mt-1 ]">{{ post.likes }}</span>
           </button>
           <button
-            class="[ hover:bg-app-hover2 rounded-full p-1 hover:text-app-button ]"
+            class="[ hover:bg-button-hover2 rounded-full p-1 hover:text-app-button ]"
           >
             <svg
               class="h-6 w-6 hover:text-app-button"

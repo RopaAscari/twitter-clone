@@ -1,4 +1,4 @@
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition, IconPack, library } from '@fortawesome/fontawesome-svg-core';
 import {
   faArrowCircleDown,
   faArrowCircleUp,
@@ -18,31 +18,35 @@ import {
   faLock,
   faPencilAlt,
   faSearch,
+  faTimes,
   faTrashAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
 
+type IconDefinitionOrPack = IconDefinition | IconPack;
+
 library.add(
-  faArrowUp ,
-  faArrowDown,
-  faArrowCircleUp,
-  faArrowCircleDown,
-  faChevronUp,
-  faChevronDown,
-  faChevronLeft,
-  faCoins,
-  faEllipsisV,
-  faLock,
-  faCheckCircle,
-  faChartLine,
-  faChartPie,
-  faCaretUp,
-  faPencilAlt,
-  faTrashAlt,
-  faSearch,
-  faEye,
-  faEyeSlash,
+  faTimes as IconDefinitionOrPack,
+  faArrowUp as IconDefinitionOrPack,
+  faArrowDown as IconDefinitionOrPack,
+  faArrowCircleUp as IconDefinitionOrPack,
+  faArrowCircleDown as IconDefinitionOrPack,
+  faChevronUp as IconDefinitionOrPack,
+  faChevronDown as IconDefinitionOrPack,
+  faChevronLeft as IconDefinitionOrPack,
+  faCoins as IconDefinitionOrPack,
+  faEllipsisV as IconDefinitionOrPack,
+  faLock as IconDefinitionOrPack,
+  faCheckCircle as IconDefinitionOrPack,
+  faChartLine as IconDefinitionOrPack,
+  faChartPie as IconDefinitionOrPack,
+  faCaretUp as IconDefinitionOrPack,
+  faPencilAlt as IconDefinitionOrPack,
+  faTrashAlt as IconDefinitionOrPack,
+  faSearch as IconDefinitionOrPack,
+  faEye as IconDefinitionOrPack,
+  faEyeSlash as IconDefinitionOrPack,
 );
 
 const FONT_AWESOME_COMPONENT = 'font-awesome-icon';

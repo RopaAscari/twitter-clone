@@ -7,7 +7,7 @@ const { default: generatedRoutes } = require('../../.rdvue/routes.js');
 Vue.use(Router);
 
 export enum Page {
-  Twitter = 'twitter',
+  Home = 'home',
   Hello = 'hello-world',
   NotFound = 'not-found',
 }
@@ -42,8 +42,8 @@ export default new Router({
         ),
     },
     {
-      path: '/twitter',
-      name: Page.Twitter,
+      path: '/home',
+      name: Page.Home,
       meta: {
         layout: 'default',
       },

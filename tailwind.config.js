@@ -25,9 +25,6 @@ module.exports = {
       transparent: 'transparent',
       app: {
         main: 'var(--app-main)',
-        hover :'var(--app-hover)', 
-        hover2:'var(--app-hover2)',
-        hover3:'var(--app-hover3)',
         search:'var(--app-search)',
         button: 'var(--app-button)',
         button2:'var(--app-button2)',
@@ -45,6 +42,10 @@ module.exports = {
       },
       button: {
         'hover': 'var(--button-hover)',
+        'hover1':'var(--button-hover1)',
+        'hover2':'var(--button-hover2)',
+        'hover3':'var(--button-hover3)',
+        'hover4':'var(--button-hover4)',
         'success': 'var(--button-success)',
         'failure': 'var(--button-failure)',
       },

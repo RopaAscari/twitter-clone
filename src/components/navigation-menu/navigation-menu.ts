@@ -1,7 +1,8 @@
+import data from '../../config/data.json';
 import { Component, Prop, Vue } from 'vue-property-decorator';
-
+import BButton from 'buefy/src/components/button/Button.vue';
 @Component({
-  components: {},
+  components: { BButton, },
   name: 'navigation-menu',
 })
 
@@ -10,7 +11,7 @@ class NavigationMenu extends Vue {
   // --------------------------------------------------------------------------
   // Fields
   // --------------------------------------------------------------------------
-
+  public user = data.user;
   // --------------------------------------------------------------------------
   // Props
   // --------------------------------------------------------------------------

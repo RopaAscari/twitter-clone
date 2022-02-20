@@ -4,20 +4,39 @@
   <div class="[ trending overflow-y-hidden h-screen ]">
     <div class="[ w-full ]">
       <header
-        class="[ bg-app-background fixed flex justify-between w-6/6 mt-2 ml-3 ]"
+        class="[ bg-app-background fixed flex justify-between w-6/6 mt-2 ml-3 field-width ]"
       >
-        <b-field type="is-auto-complete">
+        <b-field type="is-info" class="[ w-full ]">
           <b-autocomplete
             expanded
+            rounded
             clearable
-            icon="search"
+            icon="maginfy"
             v-model="name"
-            :data="filteredDataArray"
+            :data="options"
+            @input="onSearch"
             placeholder="Search Twitter"
-            custom-class="[ bg-app-search ]"
-            class="[ placeholder-typography-light bg-app-search field-width h-12 rounded-full pl-4 pt-2 ]"
+            custom-class="[ bg-app-search w-full placeholder-typography-light border-transparent ]"
+            class="[ placeholder-typography-light w-full rounded-full pt-2 z-50 border-transparent  ]"
             @select="(option) => (selected = option)"
           >
+            <template slot-scope="props" class="[ z-50 ]">
+              <div class="[ media z-50 ]">
+                <div class="[ media-left z-50  ]">
+                  <img
+                    width="50"
+                    class="[ rounded-full ]"
+                    :src="props.option.profilePic"
+                  />
+                </div>
+                <div class="[ no-underline ]">
+                  <p class="[ no-underline font-bold text-md ]">
+                    {{ props.option.displayName }}
+                  </p>
+                  <p>{{ props.option.username }}</p>
+                </div>
+              </div>
+            </template>
             <template #empty>No results found</template>
           </b-autocomplete>
         </b-field>
@@ -28,12 +47,15 @@
     <br />
 
     <div class="[ p-4 mt-2 ]">
-      <div class="[ bg-app-trending w-7/12 rounded-lg ]">
+      <div class="[ bg-app-trending w-6/12 rounded-lg ]">
         <div class="[ flex w-full justify-between text-center p-4 ]">
-          <span class="[ font-bold text-2xl text-typography-primary ]"
+          <span class="[ font-bold text-xl text-typography-primary ]"
             >Trends for you</span
           >
-          <button class="[ hover:bg-app-hover rounded-full ]">
+          <button
+            class="[ hover:bg-button-hover rounded-full p-1 ]"
+            @click="isSettingsOpen = true"
+          >
             <svg
               class="h-6 w-6 text-red-500"
               width="24"
@@ -57,27 +79,27 @@
         <div
           :key="trend.id"
           v-for="trend in trends"
-          class="[ pl-4 pr-4 mt-4 flex justify-between hover:bg-app-hover cursor-pointer ]"
+          class="[ pl-4 pr-4 mt-4 flex justify-between hover:bg-button-hover cursor-pointer ]"
         >
           <div>
-            <span class="[ font-medium text-sm text-typography-tertiary ]">{{
+            <span class="[ text-sm text-typography-tertiary ]">{{
               trend.title
             }}</span>
             <p class="[ font-bold ]">{{ trend.subtitle }}</p>
-            <span class="[ font-medium text-sm text-typography-tertiary ]">{{
+            <span class="[ text-sm text-typography-tertiary ]">{{
               trend.miniSubtitle
             }}</span>
           </div>
 
           <div>
-            <b-dropdown aria-role="list">
-              <template #trigger="{}">
+            <b-dropdown class="[ ]" aria-role="list">
+              <template class="[  ]" #trigger="{}">
                 <button
                   type="button"
-                  class="[ hover:bg-app-hover2 rounded-full text-center justify-center flex align-middle mt-4 ]"
+                  class="[  hover:bg-button-hover2 rounded-full text-center justify-center flex align-middle mt-4 ]"
                 >
                   <svg
-                    class="[ h-6 w-6 hover:text-button-hover text-center ]"
+                    class="[ h-6 w-6 hover:text-button-hover1 text-center z-0 ]"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -132,23 +154,23 @@
             </b-dropdown>
           </div>
         </div>
-        <button class="[ hover:bg-app-hover w-full h-16 ]">
+        <button class="[ hover:bg-button-hover w-full h-16 ]">
           <p class="[ text-app-button p-4 mb-5 text-left ]">Show More</p>
         </button>
       </div>
     </div>
 
     <div class="[ p-4 ]">
-      <div class="[ bg-app-trending w-7/12 rounded-lg ]">
+      <div class="[ bg-app-trending w-6/12 rounded-lg ]">
         <div class="[ flex w-full justify-between text-center p-4 ]">
-          <span class="[ font-bold text-2xl text-typography-primary ]"
+          <span class="[ font-bold text-xl text-typography-primary ]"
             >Who to follow</span
           >
         </div>
         <div
           :key="following.id"
           v-for="following in whoToFollow"
-          class="[ p-4 flex justify-between hover:bg-app-hover cursor-pointer ]"
+          class="[ p-4 flex justify-between hover:bg-button-hover cursor-pointer ]"
         >
           <div class="[ flex ]">
             <img
@@ -194,19 +216,136 @@
           </div>
 
           <div>
-            <button
-              class="[ bg-typography-primary hover:bg-typography-primary text-white font-bold py-0 px-5 rounded-full text-center ]"
+            <b-button
+              size="is-small"
+              @click="followUser(following)"
+              v-if="!following.isFollowing"
+              class="[ bg-typography-primary hover:bg-button-hover4 text-white font-bold py-0 px-5 rounded-full text-center ]"
             >
               <p class="[ text-app-background text-center mt-2 mb-2 ]">
                 Follow
               </p>
-            </button>
+            </b-button>
+
+             <b-button
+              size="is-small"
+              v-else
+              @click="openUnfollowModal(following)"
+              class="[ border-2 hover:border-transparent bg-app-background hover:text-typography-error hover:bg-button-failure text-white font-bold py-0 px-5 rounded-full text-center ]"
+            >
+              <p
+                class="[ text-typography-secondary font-normal hover:text-typography-error text-center mt-2 mb-2 ]"
+              >
+                Following
+              </p>
+            </b-button>
           </div>
         </div>
-        <button class="[ hover:bg-app-hover w-full h-16 ]">
+        <button class="[ hover:bg-button-hover w-full h-16 ]">
           <p class="[ text-app-button p-4 mb-5 text-left ]">Show More</p>
         </button>
       </div>
     </div>
+
+    <b-modal
+      :active="isUnfollowing"
+      trap-focus
+      :destroy-on-hide="false"
+      aria-modal
+    >
+      <div class="[ align-middle items-center flex ml-64 ]">
+        <div class="[ bg-app-background w-5/12 rounded-2xl p-5 ]">
+          <p class="[ font-bold text-xl text-typography-primary ]">
+            Unfollow {{ currentUnfollowing.username }}?
+          </p>
+
+          <p class="[ mt-4 text-typography-secondary text-sm ]">
+            Their Tweets will no longer show up in your home timeline. You can
+            still view their profile, unless their Tweets are protected.
+          </p>
+
+          <button
+            @click="unfollowUser()"
+            class="[ mt-6 bg-typography-primary hover:bg-button-hover4 text-white font-bold w-full rounded-full text-center ]"
+          >
+            <p
+              class="[ text-app-background text-center mt-2 mb-2 font-semibold ]"
+            >
+              Unfollow
+            </p></button
+          ><br />
+
+          <button
+            @click="closeUnfollowModal()"
+            class="[ mt-2 bg-app-background hover:bg-button-hover3 text-white font-bold w-full rounded-full text-center ]"
+          >
+            <p
+              class="[ text-typography-secondary font-normal text-center mt-2 mb-2 ]"
+            >
+              Cancel
+            </p>
+          </button>
+        </div>
+      </div>
+    </b-modal>
+    <b-modal
+      :active="isSettingsOpen"
+      trap-focus
+      :destroy-on-hide="false"
+      aria-modal
+    >
+      <div class="[ align-middle items-center flex ml-64 ]">
+        <div class="[ bg-app-background w-10/12 rounded-2xl p-5 mb-20 ]">
+          <div class="[ flex items-center ]">
+            <b-icon
+              icon="times"
+              class="[ font-normal cursor-pointer ]"
+              size="is-small"
+              @click.native="isSettingsOpen = false"
+            >
+            </b-icon>
+            <p class="[ font-bold text-xl ml-10 ]">Trends</p>
+          </div>
+          <p class="[ font-bold mt-6 text-xl text-typography-primary ]">
+            Location
+          </p>
+          <div class="[ flex justify-between ]">
+            <div class="[ mt-4 ]">
+              <p>Show content in this location</p>
+              <p class="[ text-sm mt-2 ]">
+                When this is on, you'll see what's happening around you right
+                now.
+              </p>
+            </div>
+            <div>
+              <b-field>
+                <b-checkbox type="is-info" v-model="locationCheckbox">
+                </b-checkbox>
+              </b-field>
+            </div>
+          </div>
+
+          <p class="[ font-bold text-xl mt-8 text-typography-primary ]">
+            Personalization
+          </p>
+          <div class="[ flex justify-between ]">
+            <div class="[ mt-4 ]">
+              <p>Trends for you</p>
+              <p class="[ text-sm mt-2 ]">
+                You can personalize trends based on your location and who you
+                follow
+              </p>
+            </div>
+            <div>
+              <b-field>
+                <b-checkbox type="is-info" v-model="trendingCheckbox">
+                </b-checkbox>
+              </b-field>
+            </div>
+          </div>
+          <div class="[ h-64 ]"></div>
+        </div>
+      </div>
+    </b-modal>
   </div>
 </template>

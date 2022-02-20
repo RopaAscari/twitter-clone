@@ -6,10 +6,15 @@
 
     <div class="[ menu mr-10 desktop:flex mobile:hidden ]">
       <div class="[ p-4 ]">
-        <img class="[ h-10 ml-3 ]" src="../../assets/logo/logo.png" />
+        <img
+          class="[ h-12 ml-3 cursor-pointer hover:bg-button-hover2 rounded-full p-2 ]"
+          src="../../assets/logo/logo.png"
+        />
         <br />
 
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8"
@@ -32,7 +37,9 @@
         </button>
 
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -52,7 +59,9 @@
         </button>
         <br />
 
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8"
@@ -75,7 +84,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -96,7 +107,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -116,7 +129,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -141,7 +156,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -162,7 +179,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -185,50 +204,108 @@
         <br />
         <br />
 
-        <button
-          class="[ bg-app-button hover:bg-button-hover text-white font-bold py-2 px-32 rounded-full text-center ]"
+        <b-button
+          type="is-large"
+          class="[ bg-app-button hover:bg-button-hover1 text-white font-bold py-2 px-24 rounded-full text-center ]"
         >
-          <p class="[ text-app-background text-center mt-2 mb-2 ]">Tweet</p>
-        </button>
+          <p class="[ text-app-background text-center mt-2 mb-2 text-lg ]">
+            Tweet
+          </p>
+        </b-button>
 
-        <button
-          class="[ mt-64 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 align-bottom ]"
-        >
-          <div class="[ flex ]">
-            <div>
-              <img
-                class="[ w-10 h-10 rounded-full ]"
-                src="../../assets/img/avatar.png"
-              />
-            </div>
-            <div class="[ ml-4 ]">
-              <p class="[ text-md font-bold text-left ]">Ropa</p>
-              <p class="[ text-md ]">@ropa02178838</p>
-            </div>
-
-            <svg
-              class="[ h-8 w-8 text-red-500 ml-12 ]"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+        <b-dropdown class="[ mt-64 ]" position="is-top-left" aria-role="list">
+          <template class="[ ]" #trigger="{}">
+            <button
+              class="[ hover:bg-button-hover rounded-full p-3 pl-5 pr-5 align-bottom ]"
             >
-              <circle cx="12" cy="12" r="1" />
-              <circle cx="19" cy="12" r="1" />
-              <circle cx="5" cy="12" r="1" />
-            </svg>
-          </div>
-        </button>
+              <div class="[ flex ]">
+                <div>
+                  <img
+                    class="[ w-10 h-10 rounded-full ]"
+                    src="../../assets/img/avatar.png"
+                  />
+                </div>
+                <div class="[ ml-4 ]">
+                  <p class="[ text-md font-bold text-left ]">
+                    {{ user.displayName }}
+                  </p>
+                  <p class="[ text-md ]">{{ user.username }}</p>
+                </div>
+
+                <svg
+                  class="[ h-8 w-8 text-red-500 ml-12 ]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="1" />
+                  <circle cx="19" cy="12" r="1" />
+                  <circle cx="5" cy="12" r="1" />
+                </svg>
+              </div>
+            </button>
+          </template>
+          <b-dropdown-item
+            class="[ no-underline flex text-center items-center p-4 ]"
+            aria-role="listitem"
+          >
+            <div class="[ flex ]">
+              <div>
+                <img
+                  class="[ w-10 h-10 rounded-full ]"
+                  src="../../assets/img/avatar.png"
+                />
+              </div>
+              <div class="[ ml-4 ]">
+                <p class="[ text-md font-bold text-left ]">
+                  {{ user.displayName }}
+                </p>
+                <p class="[ text-md ]">{{ user.username }}</p>
+              </div>
+
+              <svg
+                class="[ h-6 w-6 ml-12 ]"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#1c97e9"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <path d="M5 12l5 5l10 -10" />
+              </svg></div
+          ></b-dropdown-item>
+
+          <b-dropdown-item
+            class="[ no-underline flex text-center items-center p-4 ]"
+            aria-role="listitem"
+          >
+            Add exisitng account</b-dropdown-item
+          >
+          <b-dropdown-item
+            class="[ no-underline flex text-center items-center p-4 ]"
+            aria-role="listitem"
+          >
+            Logout @ropa02178838</b-dropdown-item
+          >
+        </b-dropdown>
       </div>
     </div>
+
     <div class="[ menu mr-10 desktop:hidden mobile:flex ]">
       <div class="[ p-4 ]">
         <img class="[ h-10 ml-3 ]" src="../../assets/logo/logo.png" />
         <br />
 
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -250,7 +327,9 @@
         </button>
 
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -269,7 +348,9 @@
         </button>
         <br />
 
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -291,7 +372,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -311,7 +394,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -329,7 +414,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -353,7 +440,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -373,7 +462,9 @@
           </div>
         </button>
         <br />
-        <button class="[ mt-2 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 ]">
+        <button
+          class="[ mt-2 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 ]"
+        >
           <div class="[ flex ]">
             <svg
               class="h-8 w-8 text-red-500"
@@ -397,7 +488,7 @@
         <br />
 
         <button
-          class="[ mt-64 hover:bg-app-hover rounded-full p-3 pl-5 pr-5 align-bottom ]"
+          class="[ mt-64 hover:bg-button-hover rounded-full p-3 pl-5 pr-5 align-bottom ]"
         >
           <div class="[ flex ]">
             <div>

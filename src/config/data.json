@@ -1,4 +1,8 @@
 {
+  "user":{
+    "displayName":"Ropa",
+    "username":"@ropa02178838"
+  },
   "posts":[
     {
       "id":1,
@@ -84,25 +88,31 @@
   ],
   "whoToFollow": [
     {
+      "id":1,
       "profilePic": "https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/drake.jpg?alt=media&token=831a9c05-0d88-40bc-868d-8b9996d260f2",
       "displayName": "Aubrey Graham",
       "username": "@champangepapi",
       "isVerified": true,
-      "isPromoted": true
+      "isPromoted": true,
+      "isFollowing":false
     },
     {
+      "id":2,
       "profilePic": "https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/fornite.webp?alt=media&token=41baf0fc-ae2e-469e-a0e3-831f5d912ff1",
       "displayName": "Fornite",
       "username": "@fornitegaming",
       "isVerified": true,
-      "isPromoted": false
+      "isPromoted": false,
+      "isFollowing":false
     },
     {
+      "id":3,
       "profilePic": "https://firebasestorage.googleapis.com/v0/b/twitterclone-a9b8d.appspot.com/o/lilbaby.jpg?alt=media&token=8680091d-6994-4128-bbed-ce8d07c4f64f",
       "displayName": "Lil Baby",
       "username": "@lilbaby",
       "isVerified": true,
-      "isPromoted": false
+      "isPromoted": false,
+      "isFollowing":false
     }
   ]
 }
