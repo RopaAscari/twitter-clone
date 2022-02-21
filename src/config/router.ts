@@ -19,14 +19,14 @@ export default new Router({
     ...generatedRoutes,
     {
       path: '/',
-      name: Page.Hello,
+      name: Page.Home,
       meta: {
         layout: 'default',
       },
       component: () =>
         import(
           /* webpackChunkName: "hello-world" */
-          '@/pages/hello-world'
+          '@/pages/twitter'
         ),
     },
     {
@@ -39,18 +39,6 @@ export default new Router({
         import(
           /* webpackChunkName: "not-found" */
           '@/pages/not-found'
-        ),
-    },
-    {
-      path: '/home',
-      name: Page.Home,
-      meta: {
-        layout: 'default',
-      },
-      component: () =>
-        import(
-          /* webpackChunkName: "not-found" */
-          '@/pages/twitter'
         ),
     },
   ],
