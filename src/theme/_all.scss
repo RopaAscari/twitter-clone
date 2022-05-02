@@ -59,5 +59,8 @@ input[type='button']::-moz-focus-inner {
   background-color: rgba(white, 0.9) !important;
 }
 
+.header-navbar {
+  background-color: rgba(rgb(34, 34, 34), 0.9) !important;
+}
 //TODO: import additional global CSS here.
 @import 'bulma';

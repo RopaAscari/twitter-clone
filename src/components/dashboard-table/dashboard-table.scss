@@ -1,0 +1,29 @@
+.dashboard-table {
+    // Write your styles here.
+      /* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+    transition: all .5s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .5s cubic-bezier(1.0, 0.5, 1.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity 0.8s;
+    }
+    
+    .fade-enter,
+    .fade-leave-to {
+      opacity: 0;
+    }
+    .rounded-t-4xl {
+      border-top-left-radius: 2.5rem !important;
+      border-top-right-radius: 2.5rem !important; 
+   }
+}

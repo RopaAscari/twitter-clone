@@ -8,6 +8,7 @@ Vue.use(Router);
 
 export enum Page {
   Home = 'home',
+  Twitter = 'twitter',
   Hello = 'hello-world',
   NotFound = 'not-found',
 }
@@ -18,8 +19,8 @@ export default new Router({
   routes: [
     ...generatedRoutes,
     {
-      path: '/',
-      name: Page.Home,
+      path: '/twitter',
+      name: Page.Twitter,
       meta: {
         layout: 'default',
       },
@@ -27,6 +28,18 @@ export default new Router({
         import(
           /* webpackChunkName: "hello-world" */
           '@/pages/twitter'
+        ),
+    },
+    {
+      path: '/home',
+      name: Page.Home,
+      meta: {
+        layout: 'dashboard',
+      },
+      component: () =>
+        import(
+          /* webpackChunkName: "hello-world" */
+          '@/pages/home'
         ),
     },
     {

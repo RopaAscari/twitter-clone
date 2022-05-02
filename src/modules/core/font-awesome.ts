@@ -16,6 +16,7 @@ import {
   faEye,
   faEyeSlash,
   faLock,
+  faBell,
   faPencilAlt,
   faSearch,
   faTimes,
@@ -27,6 +28,7 @@ import Vue from 'vue';
 type IconDefinitionOrPack = IconDefinition | IconPack;
 
 library.add(
+  faBell as IconDefinitionOrPack,
   faTimes as IconDefinitionOrPack,
   faArrowUp as IconDefinitionOrPack,
   faArrowDown as IconDefinitionOrPack,

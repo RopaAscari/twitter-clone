@@ -23,7 +23,12 @@ module.exports = {
     colors: {
       inherit: 'inherit',
       transparent: 'transparent',
+      navbar:{
+        hover: 'var(--navbar-hover)',
+      },
       app: {
+        navbar: 'var(--app-navbar)',
+        sidebar: 'var(--app-sidebar)',
         main: 'var(--app-main)',
         search:'var(--app-search)',
         button: 'var(--app-button)',
